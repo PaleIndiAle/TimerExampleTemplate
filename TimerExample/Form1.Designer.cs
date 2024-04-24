@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.titleLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.colourLabel = new System.Windows.Forms.Label();
             this.timeLabel = new System.Windows.Forms.Label();
             this.timeOutput = new System.Windows.Forms.Label();
+            this.countTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // titleLabel
@@ -139,6 +141,11 @@
             this.timeOutput.TabIndex = 23;
             this.timeOutput.Text = "0";
             // 
+            // countTimer
+            // 
+            this.countTimer.Interval = 1000;
+            this.countTimer.Tick += new System.EventHandler(this.countTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +180,7 @@
         private System.Windows.Forms.Label colourLabel;
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Label timeOutput;
+        private System.Windows.Forms.Timer countTimer;
     }
 }
 
